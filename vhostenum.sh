@@ -15,4 +15,4 @@ done
 
 size=$(curl -s http://$1 -H "Host: probablynotavhost.$1" | wc -c)
 
-ffuf -u http://$1 -w $w -H "Host: FUZZ.$1" -fs $size
+ffuf -u http://$1 -w $w -H "Host: FUZZ.$1" -fs $size | tee /home/$USER/htb/$H
