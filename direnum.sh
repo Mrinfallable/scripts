@@ -12,4 +12,4 @@ while getopts ":h:w:o" opt; do
   esac
 done
 
-ffuf -s -u http://$h/FUZZ -w $w -e $o | tee /home/twue-wuv/htb/$H/dirscan.txt 
+ffuf -s -u http://$h/FUZZ -w $w -e $o | tee /home/$USER/htb/$H/dirscan.txt 
