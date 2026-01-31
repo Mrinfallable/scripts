@@ -13,6 +13,6 @@ done
 
 #usage: ./
 
-size=$(curl -s http://$1 -H "Host: probablynotavhost.$1" | wc -c)
+size=$(curl -s http://$h -H "Host: probablynotavhost.$h" | wc -c)
 
-ffuf -u http://$1 -w $w -H "Host: FUZZ.$1" -fs $size | tee /home/$USER/htb/$H
+ffuf -u http://$h -w $w -H "Host: FUZZ.$h" -fs $size | tee /home/$USER/htb/$H
